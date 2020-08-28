@@ -118,6 +118,8 @@ class GameView(arcade.View):
             for row in b:
                 cache = None
                 for val in row:
+                    if val == 0:
+                        return False
                     if val == cache:
                         return False
                     else:
